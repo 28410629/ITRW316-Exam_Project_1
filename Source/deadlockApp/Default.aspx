@@ -15,19 +15,21 @@
     <style>
         .text-primary
         {
+           
             margin:auto;
             min-width: 150px;
-            max-width: 700px;
+            max-width: 800px;
             min-height: 210px;
-            max-height:220px;
+            max-height:320px;
             resize:inherit;
+            width: 75%;
         }
     </style>
    
 
          <center>
-             <asp:TextBox ID="displayBox" runat="server" BorderColor="#CC0099" BorderWidth="2px" Height="212px" ReadOnly="True" TextMode="MultiLine" ToolTip="The Text" CssClass="text-primary" Width="550px">hi daar</asp:TextBox>
-        </center>
+             <asp:TextBox ID="displayBox" runat="server" BorderColor="#CC0099" BorderWidth="2px" Height="252px" ReadOnly="True" TextMode="MultiLine" ToolTip="The Text" CssClass="text-primary" >hi daar</asp:TextBox>
+         </center>
 
 
     <div class="row">

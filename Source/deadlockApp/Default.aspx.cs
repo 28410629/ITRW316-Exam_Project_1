@@ -12,7 +12,6 @@ public partial class _Default : Page
     protected void Page_Load(object sender, EventArgs e)
     {
         updatetext();
-        
     }
 
 
@@ -28,13 +27,14 @@ public partial class _Default : Page
         if (firstWord.Text == "" || secondWord.Text == "")
         {
             loadImg.Visible = false;
+            ErrorLabel.Text = "Please do not leave any of the text fields empty.";
             return;
         }
 
         //check for lock here
         if (File.Exists(Server.MapPath("theFile.lock")))
         {
-            ErrorLabel.Text = "File currently in use, please try again.";
+            ErrorLabel.Text = "File currently in use, please wait a while and then press the button again.";
             return;
         }
 
@@ -50,7 +50,7 @@ public partial class _Default : Page
         }
         catch (Exception err)
         {
-            ErrorLabel.Text = "File currently in use, please try again.";
+            ErrorLabel.Text = "File currently in use, please wait a while and then press the button again.";
             return;
         }
 
